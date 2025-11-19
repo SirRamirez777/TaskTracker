@@ -1,0 +1,6 @@
+C:\Users\cts006\projects\TaskTrackerApi\obj\Debug\net5.0\TaskTrackerApi.csprojAssemblyReference.cache
+C:\Users\cts006\projects\TaskTrackerApi\obj\Debug\net5.0\TaskTrackerApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cts006\projects\TaskTrackerApi\obj\Debug\net5.0\TaskTrackerApi.AssemblyInfoInputs.cache
+C:\Users\cts006\projects\TaskTrackerApi\obj\Debug\net5.0\TaskTrackerApi.AssemblyInfo.cs
+C:\Users\cts006\projects\TaskTrackerApi\obj\Debug\net5.0\TaskTrackerApi.csproj.CoreCompileInputs.cache
+C:\Users\cts006\projects\TaskTrackerApi\obj\Debug\net5.0\TaskTrackerApi.MvcApplicationPartsAssemblyInfo.cache

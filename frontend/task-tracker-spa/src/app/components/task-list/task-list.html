@@ -1,0 +1,29 @@
+<div>
+  <h2>Task List</h2>
+
+  <input type="text" placeholder="Search..." [(ngModel)]="search" (input)="onSearchChange(search)" />
+
+  <button (click)="toggleSort()">Sort by Due Date {{ sort === 'dueDate:asc' ? '↑' : '↓' }}</button>
+
+  <div *ngIf="loading">Loading...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <table *ngIf="!loading && tasks.length">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Status</th>
+        <th>Priority</th>
+        <th>Due Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of tasks">
+        <td>{{ t.title }}</td>
+        <td>{{ t.status }}</td>
+        <td>{{ t.priority }}</td>
+        <td>{{ t.dueDate | date:'shortDate' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

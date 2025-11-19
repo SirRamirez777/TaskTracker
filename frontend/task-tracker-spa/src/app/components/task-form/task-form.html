@@ -1,0 +1,39 @@
+<div>
+  <h2>{{ taskId ? 'Edit Task' : 'New Task' }}</h2>
+
+  <form [formGroup]="taskForm" (ngSubmit)="submit()">
+    <div>
+      <label>Title</label>
+      <input formControlName="title" />
+      <div *ngIf="taskForm.get('title')?.invalid && taskForm.get('title')?.touched">Title is required</div>
+    </div>
+
+    <div>
+      <label>Description</label>
+      <textarea formControlName="description"></textarea>
+    </div>
+
+    <div>
+      <label>Status</label>
+      <select formControlName="status">
+        <option *ngFor="let s of statusOptions" [value]="s">{{ s }}</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Priority</label>
+      <select formControlName="priority">
+        <option *ngFor="let p of priorityOptions" [value]="p">{{ p }}</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Due Date</label>
+      <input type="date" formControlName="dueDate" />
+    </div>
+
+    <div *ngIf="error" class="error">{{ error }}</div>
+
+    <button type="submit" [disabled]="loading">{{ loading ? 'Saving...' : 'Save' }}</button>
+  </form>
+</div>
